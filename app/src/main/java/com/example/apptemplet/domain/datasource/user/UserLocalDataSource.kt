@@ -1,5 +1,6 @@
 package com.example.apptemplet.domain.datasource.user
 
+import androidx.lifecycle.LiveData
 import com.example.apptemplet.db.dao.DataItemDao
 import com.example.apptemplet.db.entity.DataItem
 import kotlinx.coroutines.Dispatchers
@@ -34,4 +35,7 @@ class UserLocalDataSource @Inject internal constructor(private val dao: DataItem
         }
     }
 
+    fun getUserDataSortedByName(): LiveData<List<DataItem>> {
+        return dao.getEmployeesDataSortedByName()
+    }
 }

@@ -34,4 +34,8 @@ class DashboardFragmentViewModel @Inject internal constructor(private val userRe
             userRepository.deleteFromLocal(dataItem)
         }
     }
+
+    fun fetchUserSortByName(): LiveData<List<DataItem>> {
+        return userRepository.loadUserDataSortByName()
+    }
 }

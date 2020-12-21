@@ -34,4 +34,7 @@ interface DataItemDao {
     @Query("SELECT count(*) from Employee")
     fun getEmployeeCount():Int
 
+    @Query("SELECT * FROM Employee order by firstName asc ")
+    fun getEmployeesDataSortedByName():LiveData<List<DataItem>>
+
 }

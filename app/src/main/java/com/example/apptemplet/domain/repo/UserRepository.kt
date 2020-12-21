@@ -84,4 +84,5 @@ class UserRepository @Inject constructor(
     suspend fun deleteFromLocal(dataItem: DataItem) = userLocalDataSource.deleteRecord(dataItem)
 
     suspend fun updateRecord(dataItem: DataItem) = userLocalDataSource.updateRecord(dataItem)
+    fun loadUserDataSortByName() = userLocalDataSource.getUserDataSortedByName()
 }
