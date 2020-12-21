@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mobile_navigation.xml"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.example.apptemplet.ui.dashboard.DashboardFragment"
+        android:label="DashboardFragment">
+
+        <action
+            android:id="@+id/dashboard_to_detail_fragment"
+            app:destination="@+id/detailFragment"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.apptemplet.ui.detail.UserDetailFragment"
+        android:label="UserDetail">
+        <argument
+            android:name="user"
+            app:argType="com.example.apptemplet.db.entity.DataItem"/>
+    </fragment>
+
+
+</navigation>
